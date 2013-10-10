@@ -1,14 +1,13 @@
-body {
-  min-height: 2000px;
-}
 
 .navbar-static-top {
   margin-bottom: 19px;
 }
 
 .container {
+    min-height: 100%;
     position: relative;
 }
+
 
 .navbar-static-top {
     position: relative;
@@ -63,6 +62,7 @@ Theme Styles
 *******************************************************************************/
 
 body {
+  height: 100%;
   box-sizing: border-box;
   color:#373737;
   font-size: 16px;
@@ -70,6 +70,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
@@ -147,21 +148,6 @@ em {
 
 strong {
   font-weight: bold;
-}
-
-img {
-  position: relative;
-  margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
-
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
 }
 
 pre, code {
@@ -261,11 +247,6 @@ td {
 form {
   background: #f2f2f2;
   padding: 20px;
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
 }
 
 /*******************************************************************************
@@ -395,4 +376,85 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+
+
+/*
+ *    Trobz website footer 
+ */
+
+
+#bottom-container {
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height: 82px;
+    background-color: #f7941e;
+}
+
+#footer-content {
+    color: #ffba53;
+    width: 960px;
+    height: 62px;
+    background-image: url(../img/footer-glow.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin: 0px auto;
+}
+
+#footer-address {
+    width: 273px;
+    margin-top: 10px;
+    float: left;
+}
+
+#footer-address img {
+    margin-bottom: 0px;
+}
+
+#footer-last {
+    width: 960px;
+    margin-top: 0px;
+    border-top: 1px solid #ffba53;
+    float: left;
+}
+
+#footer-menu {
+    width: 500px;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+.navigation-footer li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    z-index: 100;
+    position: relative;
+}
+
+.navigation-footer li a {
+    font-size: 11px;
+    text-decoration: none;
+    color: #ffba53;
+    display: block;
+    margin: 0px;
+    padding-right: 24px;
+    float: left;
+    z-index: 100;
+}
+.navigation-footer {
+    width: 543px;
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+#footer-copyright {
+    font-size: 11px;
+    margin-top: 0px;
+    float: right;
 }
