@@ -8,6 +8,8 @@
 
     <title>{{ site.name }} - {{ page.title }}</title>
 
+    <link rel="icon" type="image/x-icon" href="{{relative}}favicon.ico" />
+
     {% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
     {% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
 
