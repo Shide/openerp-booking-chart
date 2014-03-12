@@ -28,6 +28,11 @@
     height: 32px;
 }
 
+.booking-chart-months .calendar-weeks {
+    border-bottom: 2px solid #ddd;
+    height: 16px;
+}
+
 .booking-chart-months .calendar-day {
     width: 1em;
     background-image: url('../images/border_pixel.png');
@@ -39,7 +44,24 @@
     float: left;
 }
 
-.booking-chart-months .calendar-day span {
+.booking-chart-months .calendar-week-cell {
+    width: 1em;
+    height: 16px;
+    font-weight: normal;
+    text-align: center;
+    float: left;
+}
+.booking-chart-months .calendar-week-cell.first-week-day {
+    background-image: url('../images/border_pixel.png');
+    background-repeat: repeat-y;
+    background-position: top left;
+}
+.booking-chart-months .calendar-week-cell.last-week-day {
+    background-image: url('../images/border_pixel.png');
+    background-repeat: repeat-y;
+    background-position: top right;
+}
+.booking-chart-months .calendar-day span, .booking-chart-months .calendar-week-cell span {
     font-size: 10px;
     display: block;
     margin-top: 2px;
@@ -120,6 +142,9 @@
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
 }
+.booking-chart-months.zoom-xs .calendar-week-cell span.week_number { 
+    font-size: 8px;
+}
 .booking-chart-months.zoom-xs .calendar-month div.resources { background-image: url('../images/bg_week_xs.png'); }
 .booking-chart-months.zoom-xs .calendar-month.current div.resources { background-image: url('../images/bg_week_xs.png'), url('../images/bg_today_xs.png'); }
 
@@ -133,6 +158,9 @@
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
 }
+.booking-chart-months.zoom-s .calendar-week-cell span.week_number {
+    font-size: 10px;
+}
 .booking-chart-months.zoom-s .calendar-month div.resources { background-image: url('../images/bg_week_s.png'); }
 .booking-chart-months.zoom-s .calendar-month.current div.resources { background-image: url('../images/bg_week_s.png'), url('../images/bg_today_s.png'); }
 
@@ -140,7 +168,7 @@
 
 .booking-chart-months.zoom-l .calendar-day span.day_fullname { display: block; }
 .booking-chart-months.zoom-l .calendar-day span.day_name { display: none; }
-.booking-chart-months.zoom-l .calendar-day span {
+.booking-chart-months.zoom-l .calendar-day span, .booking-chart-months.zoom-l .calendar-week-cell span.week_number {
     font-size: 10px;
 }
 .booking-chart-months.zoom-l .calendar-month div.resources { background-image: url('../images/bg_week_l.png'); }
@@ -150,7 +178,7 @@
 
 .booking-chart-months.zoom-xl .calendar-day span.day_fullname { display: block; }
 .booking-chart-months.zoom-xl .calendar-day span.day_name { display: none; }
-.booking-chart-months.zoom-xl .calendar-day span.day_number { 
+.booking-chart-months.zoom-xl .calendar-day span.day_number, .booking-chart-months.zoom-xl .calendar-week-cell span.week_number { 
     font-size: 11px;
 }
 .booking-chart-months.zoom-xl .calendar-month div.resources { background-image: url('../images/bg_week_xl.png'); }
