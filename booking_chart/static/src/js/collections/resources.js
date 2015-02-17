@@ -88,11 +88,13 @@ openerp.unleashed.module('booking_chart', function(booking, _, Backbone){
         loadPage: function(){
             var ids = [];
             
+            var real_model_name = this.items.model_name;
+
             this.reset();
             this.daterange.addedFull();
             
             this.items.each(function(item){
-                ids.push(item.model_name + ',' + item.get('id'));    
+                ids.push((real_model_name || item.model_name) + ',' + item.get('id'));    
             });
             
             this.item_ids = ids;
@@ -102,10 +104,12 @@ openerp.unleashed.module('booking_chart', function(booking, _, Backbone){
         loadGroup: function(query, group){
             var ids = [];
             
+            var real_model_name = this.items.model_name;
+            
             this.daterange.addedFull();
             
             group.each(function(item){
-                ids.push(item.model_name + ',' + item.get('id'));    
+                ids.push((real_model_name || item.model_name) + ',' + item.get('id'));    
             });
                 
             this.item_ids = ids.concat(this.item_ids);
